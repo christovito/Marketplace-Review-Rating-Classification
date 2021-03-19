@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Online Marketplace Sentiment Analysis</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
+    </head>
+    <style>
+        body {
+            font-family: "Open Sans";
+            margin: 0px;
+        }
+    </style>
+    <body>
+        <div class="form-hero">
+            <div class="fcont">
+                <div class="text">
+                    <h2>
+                        SENTIMENT ANALYZER
+                    </h2>
+                    <h4>
+                        Biarkan model AI kami menilai sentimen terhadap pendapat Anda
+                    </h4>
+                </div>
+                <form action="{{ url_for('result')}}" method="POST">
+                    <p>
+                        <textarea placeholder="Masukan komentar Anda di sini" name="message" id="is" cols="80" rows="10"></textarea>
+                        <br>
+                        <button class="btnz">cek sentimen</button>
+                    </p>                   
+                </form>
+            </div>
+        </div>
+        <section class="about">
+            <div class="a-text">
+                <h2>Mengapa Sentiment Analysis?</h2>
+            <br>
+            <p>
+                Di Indonesia, ada sekitar <em>46,1 juta</em> pengguna melakukan transaksi online lebih dari sekali dalam sebulan, 18,8 juta pengguna melakukannya kurang dari sekali dalam sebulan, 6,2 juta pengguna melakukannya seminggu sekali, dan lebih dari 5 juta melakukannya lebih dari sekali dalam seminggu*.
+                <br><br>
+                Seringkali review yang ditulis oleh pengguna tidak memiliki struktur yang baik. Padahal, peringkat dan komentar yang diberikan untuk suatu produk oleh pembeli dapat memberikan pemahaman bagi penjual dan pemilik dari platform online marketplace. Ulasan produk membantu mereka memahami kebutuhan pelanggan dan dengan cepat menyesuaikan layanan untuk memberikan pengalaman yang jauh lebih baik bagi pada pesanan berikutnya. Komentar pengguna untuk produk mencakup berbagai aspek seperti layanan pengiriman, pengemasan produk, kualitas produk, spesifikasi produk, metode pembayaran, dll. Oleh karena itu, penting untuk membangun suatu sistem yang akurat untuk memahami ulasan tersebut.
+
+                <br><br>
+                <h6><a href="https://www.researchgate.net/publication/324838610_Sentiment_Analysis_in_the_Sales_Review_of_Indonesian_Marketplace_by_Utilizing_Support_Vector_Machine">
+                    *sumber: Luthfi, A., Permanasari, E. Fauziati, S.(2018).Sentiment Analysis in the Sales Review of Indonesian Marketplace by Utilizing Support Vector Machine. Journal of Information Systems Engineering and Business Intelligence 4(1):57. DOI: 10.20473/jisebi.4.1.57-64
+                </a>
+                </h6>
+            </p>
+            </div>
+            <div class="btnz">
+                <a href="{{ url_for('home')}}">laman utama</a>
+                <!-- <a href='#'>latar belakang</a> -->
+            </div>
+        </section>
+    </body>
+<html>

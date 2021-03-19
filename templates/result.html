@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Online Marketplace Sentiment Analysis</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
+    </head>
+    <style>
+        body {
+            font-family: "Open Sans";
+            margin: 0px;
+        }
+    </style>
+    <body>
+        <div class="form-hero">
+            <div class="fcont">
+                <div class="text">
+                    <h3>Pesan Anda berbunyi:</h3>
+                    <h2>"{{message}}"</h2>
+                    <br><br>
+                    <h3>Model AI kami memprediksi Anda memberikan <em>rating</em> bernilai</h3>
+                    <br>
+                    {% if prediction == '1' %}
+                    <h2>1/5</h2>
+                    <h3>Terima kasih atas ulasan negatif Anda!</h3>
+                    {% elif prediction == '2' %}
+                    <h2>2/5</h2>
+                    <h3>Terima kasih atas ulasan negatif Anda!</h3>
+                    {% elif prediction == '3' %}
+                    <h2>3/5</h2>
+                    <h3>Terima kasih atas ulasan netral Anda!</h3>
+                    {% elif prediction == '4' %}
+                    <h2>4/5</h2>
+                    <h3>Terima kasih atas ulasan positif Anda!</h3>
+                    {% elif prediction == '5' %}
+                    <h2>5/5</h2>
+                    <h3>Terima kasih atas ulasan positif Anda!</h3>
+                    {% endif %}
+                </div>
+                <form>
+                    <p>
+                        <br>
+                        <div class="btnz">
+                            <a href="{{ url_for('form')}}">coba lagi</a>
+                            <!-- <a href='#'>latar belakang</a> -->
+                        </div>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <section class="about">
+            <div class="a-text">
+                <h2>Bagaimana kami membuat model AI ini?</h2>
+            <br>
+            <p>
+                Untuk membuat model AI ini, kami telah melewati proses yang cukup panjang, yaitu dengan melakukan <em>business understanding</em>, pencarian data, <em>data understanding</em>, <em>data preparation</em>, <em>data training</em> dan <em>modelling</em>, diakhiri dengan proses <em>model deployment</em> dan pembuatan <em>web</em>.
+                <br><br>
+                Dalam memodelkan data, kami menggunakan pemodelan <b>Support Vector Machine (SVM)</b> yang termasuk bagian <em>supervised machine learning</em> yang mengklasifikasikan data ke dalam <em>multiclass</em>.
+                <br><br>
+                Terima kasih telah menggunakan model AI kami, kami mohon maaf apabila model AI kami masih jauh dari sempurna.
+            </p>
+            </div>
+            <div class="btnz">
+                <a href="{{ url_for('home')}}">laman utama</a>
+                <!-- <a href='#'>latar belakang</a> -->
+            </div>
+        </section>
+    </body>
+<html>
